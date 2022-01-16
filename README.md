@@ -1,3 +1,1 @@
-# tbp_projekt_postgis
-npm install  
-npm start  
+# tbp_projekt

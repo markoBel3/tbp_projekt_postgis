@@ -1,0 +1,155 @@
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    color: white;
+    font-family: "Arial";
+    margin: 5px;
+
+}
+
+#obvijest{
+    width: 200px;
+    margin-left: 60px;
+}
+.k_kutija{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto 1fr auto;
+    row-gap: 10px;
+}
+.k_header{
+    grid-row: 1;
+    max-width: 100%;  
+    color:green;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: solid;
+    border-color: blue;
+    flex-wrap: wrap;
+}
+.k_navigacija{
+    grid-row: 2;
+    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.k_sadrzaj{
+    grid-row: 3;
+    background-color: #eaeaea;
+    color: black;
+    font-size: 20px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+.k_footer{
+    grid-row: 4;
+    border-top: solid;
+    border-color: blue;
+    padding: 1rem;
+
+}
+#slika_logo{
+    width: 200px;
+    height: 112px;
+    border-radius: 20%;
+    grid-row: 1;
+    order: 1;
+    
+}
+#naslov_stranice{
+    color: green;
+}
+.ikone{
+    grid-row: 1;
+    order: 3;
+}
+.ikone_m{
+    width: 30px;
+    height: 24px;
+    margin-right: 5px;
+    margin-top: 3px;
+}
+nav > ul {
+   list-style: none;
+   width: auto;
+   line-height: 1;
+   list-style-type:none;
+}
+
+nav > ul li {
+    display: inline;
+}
+
+nav > ul li a {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    color: black;
+    text-transform: uppercase;
+    padding: 10px 20px;
+}
+
+footer {
+    background-color: cornflowerblue;
+    text-align: center;
+    
+   
+}
+footer > address{
+    margin-top: 5px;
+}
+
+form {
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    border-style: solid;
+    border-width: 1px;
+    float:left;
+    width: 99%;
+}
+
+a{
+    text-decoration: none;
+}
+a:hover {
+    color: blue;
+    background: #eaeaea;
+}
+a:visited{
+    text-decoration: none;
+}
+h1 > a:visited,a:hover{
+    color: cornflowerblue;
+    background: none;
+}
+#naslov_stranice > a{
+	color: green;
+}
+#precac_ime{
+    color: black;
+}
+iframe{
+    margin: auto;
+    display: block;
+    margin-top: 60px;
+}
+#map { height: 500px; }
+
+
+@media only screen and (max-width: 1919px){
+
+    nav > ul li a {
+        display: block;
+    }
+    .k_navigacija{
+        justify-content: center;
+    }
+}
+
+

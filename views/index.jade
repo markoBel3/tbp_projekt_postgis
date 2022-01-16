@@ -1,0 +1,33 @@
+doctype html
+html(lang='hr')
+  head
+    title Marko Belusic
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(name='author' content='Marko Belušić')
+    meta(name='keywords' content='evidencija putovanja')
+    meta(name='application-name' content='Vlastita evidencija putovanja')
+    meta(name='description' content='Vlastita evidencija putovanja')
+    link(rel='stylesheet' type='text/css' href='/stylesheets/glavni.css')
+  body.k_kutija
+    header.k_header
+      h1#naslov_stranice
+        a(href='/') Aplikacija GEOTRIPS
+      a(href='')
+        img#slika_logo(alt='Logo ove stranice' src='/images/trip_logo.jpg')
+    nav.k_navigacija
+      ul
+        li
+          a(href='/') Početna
+        li
+          a(href='putovanja') Putovanja
+        li
+          a(href='statistika') Statistika
+    section#sadrzaj_pocetne.k_sadrzaj
+      p Dobrodošli na stranicu GEOTRIPS. Ovdje možete pratiti sva Vaša putovanja, znamenitosti koje ste vidjeli. Također možete vidjeti i statistiku.
+      p Na stranici Putovanja možete dodati nova putovanja i pratiti znamenitosti.
+      p Na stranici Statistika možete vidjet statistiku Vaših putovanja.
+    footer.k_footer
+      address
+        | Kontakt: Marko Belušić
+      p © 2022 M. Belušić

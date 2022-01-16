@@ -1,0 +1,56 @@
+doctype html
+html(lang='hr')
+  head
+    title Marko Belusic
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(name='author' content='Marko Belušić')
+    meta(name='keywords' content='evidencija putovanja')
+    meta(name='application-name' content='Vlastita evidencija putovanja')
+    meta(name='description' content='Vlastita evidencija putovanja')
+    link(rel='stylesheet' type='text/css' href='/stylesheets/glavni.css')
+    link(rel='stylesheet' href='https://unpkg.com/leaflet@1.7.1/dist/leaflet.css' integrity='sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==' crossorigin='')
+    script(src='https://unpkg.com/leaflet@1.7.1/dist/leaflet.js' integrity='sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==' crossorigin='')
+    script(src='/javascripts/rad_s_mapom.js')
+
+  body.k_kutija
+    header.k_header
+      h1#naslov_stranice
+        a(href='/') Aplikacija GEOTRIPS
+      a(href='')
+        img#slika_logo(alt='Logo ove stranice' src='/images/trip_logo.jpg')
+    nav.k_navigacija
+      ul
+        li
+          a(href='/') Početna
+        li
+          a(href='putovanja') Putovanja
+        li
+          a(href='statistika') Statistika
+    section#sadrzaj_pocetne.k_sadrzaj
+      h1 Dodaj novo putovanje
+      <div id="map"></div>
+      form#dodaj_putovanje(name='dodaj_putovanje')
+        label(for='datum') Datum: 
+        input#datum(name='datum' type='date' required='required')
+        br
+        input(name='submit' type='button' value='Dodaj putovanje' onclick="dodajUBazu()")
+      br
+      div#obavijest 
+
+      div#dodaj_znamenitost_div
+        h1 Viđena znamenitost
+        .col-md-4
+        form#dodaj_znamenitost(name='dodaj_znamenitost')
+          h4 Država u kojoj se nalazi znamenitost
+          select#lista.form-control(name='lista' onchange='dohvatiDrzavu()')
+          br
+          label(for='naziv') Naziv: 
+          input#naziv(name='naziv' type='text' required='required')
+          br
+          input(name='submit' type='button' value='Dodaj znamenitost' onclick="dodajUBazuZnamenitost()")
+        div#obavijest2
+    footer.k_footer
+      address
+        | Kontakt: Marko Belušić
+      p © 2022 M. Belušić
